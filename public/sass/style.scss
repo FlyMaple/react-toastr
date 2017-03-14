@@ -1,0 +1,44 @@
+@import 'compass/css3';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font: {
+        family: Arial, 'Microsoft JhengHei';
+    }
+}
+
+html, body {
+    margin: 0;
+}
+
+#app {
+    padding: 20px;
+    
+    pre {
+        @include border-radius(4px);
+    }
+
+    .sample {
+        padding: 5px 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        @include border-radius(4px);
+
+        button {
+            margin-top: 15px;
+            padding: 5px 10px;
+            font: {
+                size: 18px;
+            }
+            color: #fff;
+            border: 1px solid #78b1e0;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            @include border-radius(4px);
+            @include background(linear-gradient(to bottom, #8dccff, #6caadc));
+            &:hover {
+                @include background(linear-gradient(to bottom, #8dccff, darken(#6caadc, 5%)));
+            }
+        }
+    }
+}

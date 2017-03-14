@@ -1,0 +1,215 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400i,600,700,900");
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format("woff2");
+}
+#toastr_container * {
+  font-family: 'Source Sans Pro', sans-serif, '標楷體';
+}
+#toastr_container * .material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+#toastr_container {
+  position: fixed;
+}
+#toastr_container.top-right {
+  top: 20px;
+  right: 20px;
+}
+#toastr_container.top-left {
+  top: 20px;
+  left: 20px;
+}
+#toastr_container.bottom-right {
+  bottom: 0;
+  right: 20px;
+}
+#toastr_container.bottom-left {
+  bottom: 0;
+  left: 20px;
+}
+#toastr_container .toastr_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+#toastr_container .toastr_box {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-right: 30px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+#toastr_container .toastr_box:hover {
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.32);
+}
+#toastr_container .toastr_box.success {
+  background-color: #b4fbb7;
+  border: 1px solid #90da93;
+}
+#toastr_container .toastr_box.success .toastr_close {
+  color: #85d489;
+}
+#toastr_container .toastr_box.success .toastr_close:hover {
+  color: #21a526;
+  text-shadow: 0 0 1px #258829;
+}
+#toastr_container .toastr_box.success .toastr_title {
+  color: #3c8840;
+}
+#toastr_container .toastr_box.success .toastr_content {
+  color: #145d17;
+}
+#toastr_container .toastr_box.info {
+  background-color: #bce1ff;
+  border: 1px solid #a0c7e6;
+}
+#toastr_container .toastr_box.info .toastr_close {
+  color: #80b0d6;
+}
+#toastr_container .toastr_box.info .toastr_close:hover {
+  color: #487da7;
+  text-shadow: 0 0 1px #2f86ce;
+}
+#toastr_container .toastr_box.info .toastr_title {
+  color: #2585d2;
+}
+#toastr_container .toastr_box.info .toastr_content {
+  color: #0c5188;
+}
+#toastr_container .toastr_box.warn {
+  background-color: #ffcf50;
+  border: 1px solid #d8ab34;
+}
+#toastr_container .toastr_box.warn .toastr_close {
+  color: #daad35;
+}
+#toastr_container .toastr_box.warn .toastr_close:hover {
+  color: #9e7a17;
+  text-shadow: 0px 0px 1px #ce9c1a;
+}
+#toastr_container .toastr_box.warn .toastr_title {
+  color: #af830e;
+}
+#toastr_container .toastr_box.warn .toastr_content {
+  color: #5a450d;
+}
+#toastr_container .toastr_box.error {
+  background-color: #ff6f6f;
+  border: 1px solid #d64f4f;
+}
+#toastr_container .toastr_box.error .toastr_close {
+  color: #d64949;
+}
+#toastr_container .toastr_box.error .toastr_close:hover {
+  color: #a00e0e;
+  text-shadow: 0px 0px 1px #bf1a1a;
+}
+#toastr_container .toastr_box.error .toastr_title {
+  color: #b71313;
+}
+#toastr_container .toastr_box.error .toastr_content {
+  color: #800707;
+}
+#toastr_container .toastr_box.light {
+  background-color: #fff;
+  border: 1px solid transparent;
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+#toastr_container .toastr_box.light::before {
+  content: '';
+  position: relative;
+  display: block;
+  top: -10px;
+  height: 5px;
+  margin-right: -30px;
+  background-color: #ffcf50;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#toastr_container .toastr_box.light:hover {
+  -moz-box-shadow: rgba(0, 0, 0, 0.48) 0px 2px 5px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.48) 0px 2px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.48) 0px 2px 5px 0px;
+}
+#toastr_container .toastr_box.light .toastr_close {
+  color: #ccc;
+  top: 5px;
+}
+#toastr_container .toastr_box.light .toastr_close:hover {
+  color: gray;
+  text-shadow: 0px 0px 1px gray;
+}
+#toastr_container .toastr_box .toastr_title {
+  margin-bottom: 10px;
+  padding: 0 0 0 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+#toastr_container .toastr_box .toastr_content {
+  padding: 0 0 0 20px;
+  margin-bottom: 10px;
+  line-height: 26px;
+}
+#toastr_container .toastr_box .toastr_progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.32);
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#toastr_container .toastr_box .toastr_progress.transition {
+  -moz-transition: all 5s linear;
+  -o-transition: all 5s linear;
+  -webkit-transition: all 5s linear;
+  transition: all 5s linear;
+}
